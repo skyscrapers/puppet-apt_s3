@@ -21,6 +21,11 @@
 #
 class apt_s3::install {
 
+  package {
+    'python-configobj':
+      ensure => installed;
+  }
+
   file {
     '/usr/lib/apt/methods/s3':
       ensure => file,
